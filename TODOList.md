@@ -1,0 +1,5 @@
+- [ ] change main.py to run for last 7 days 
+- [ ] improve the report displace style (event is level 2, add eamil as labble)
+- [ ] add a fuction to check repreated events and only add them to the calendar if they are not already in the calendar
+- [ ] run the script every sunday and generate a report for the week
+- [ ] move personal and professioanl newslstter email to eventmails@gmail.com
