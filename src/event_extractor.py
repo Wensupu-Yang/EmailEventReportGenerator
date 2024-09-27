@@ -40,6 +40,7 @@ def process_email(body):
     system_message = """
     You are an AI assistant tasked with extracting event information from email content.
     Your job is to identify key details about events mentioned in the email and return them in a structured format.
+    If multiple events are found, return them as a list of events.
     If no event information is found, explicitly state that no event was found.
     """
 
@@ -50,11 +51,15 @@ def process_email(body):
 
     Return the information in the following JSON format:
     {{
-        "title": "Event title",
-        "date": "Event date",
-        "time": "Event time",
-        "location": "Event location",
-        "description": "Brief description of the event"
+        "events": [
+            {{
+                "title": "Event title",
+                "date": "Event date",
+                "time": "Event time",
+                "location": "Event location",
+                "description": "Brief description of the event"
+            }}
+        ]
     }}
 
     If no event information is found, return:

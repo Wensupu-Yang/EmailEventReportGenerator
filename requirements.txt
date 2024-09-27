@@ -5,3 +5,5 @@ openai
 pandas
 beautifulsoup4
 python-dotenv
+ics
+python-dateutil==2.8.2

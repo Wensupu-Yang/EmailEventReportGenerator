@@ -35,6 +35,8 @@ def parse_events(api_response):
             if 'error' in api_response:
                 logging.warning(f"API returned an error: {api_response['error']}")
                 return []
+            elif 'events' in api_response:
+                return api_response['events']
             else:
                 return [api_response]  # Single event
         elif isinstance(api_response, list):
